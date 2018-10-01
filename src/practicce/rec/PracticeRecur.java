@@ -23,10 +23,17 @@ public class PracticeRecur {
      * @return the factorial of a given number
      */
     public static int factorial(int n) {
-        if (n == 0 || n == 1) {
+
+        System.out.println("Method " + n);
+
+        if (n <= 1) {
             return 1;
         } else {
-            return factorial(n - 1) * n;
+            int result = factorial(n - 1) * n;
+            System.out.print("Returned " + result);
+            System.out.println(": " + n + " factorial(" + n + "-1)");
+
+            return result;
 
         }
     }
@@ -37,12 +44,17 @@ public class PracticeRecur {
      * @return the fibonacci of a given number
      */
     public static int fibonacci(int n) {
+        
+        System.out.println("Method " + n);
+        
         if (n < 2) {
             return 1;
         } else {
-            //System.out.println(n);
-            return fibonacci(n - 1) + fibonacci(n - 2);
-
+            int result = fibonacci(n - 1) + fibonacci(n - 2);
+            System.out.print("Returned " + result);
+            System.out.println(": " + n + " fibonacci(" + n + "-1)");
+            
+            return result;
         }
     }
 
@@ -89,6 +101,7 @@ public class PracticeRecur {
         }
 
     }
+
     //factorial also
     public static int prod(int n) {
         if (n != 1) {
@@ -108,9 +121,9 @@ public class PracticeRecur {
         }
         System.out.println(sum);
     }
-    
+
     public static void main(String[] args) {
-        System.out.println("natural: " + natural(5));
+        System.out.println(fibonacci(5));
     }
-    
+
 }
