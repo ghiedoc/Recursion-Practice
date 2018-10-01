@@ -148,9 +148,22 @@ public class PracticeRecur {
         }
         return result;
     }
+    
+    //fing GCD of two numbers
+    public static int getGCD(int n1, int n2){
+        
+        if(n2 != 0){
+            System.out.println("returned " + n1 + " % " + n2);
+            return getGCD(n2, n1 % n2);
+        }
+        else{
+            System.out.println("returned 1");
+            return n1;
+        }
+    }
 
     public static void main(String[] args) {
-        System.out.println(power(2,4));
+        System.out.println(getGCD(40,24));
         
     }
 
